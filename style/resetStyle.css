@@ -1,0 +1,225 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+@import url(https://fonts.googleapis.com/css?family=Alex+Brush:regular);
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+/*--------------------*/
+
+body {
+  font-family: "Roboto", "Alex Brush", "Montserrat";
+  background-color: #1d0800;
+  color: #fff;
+  overflow-x: hidden;
+  margin: 0px;
+  padding: 0px;
+  min-width: 320px;
+  position: relative;
+}
+
+.wrapper {
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+  overflow: clip;
+}
+
+[class*="__container"] {
+  max-width: 1442px;
+  margin: 0 auto;
+  padding: 0px 30px;
+}
+.main {
+  flex: 1 1 auto;
+}
+
+/*=============================================================*/
+
+/*Animation*/
+
+.home__container.animation {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.6s ease;
+}
+
+.home__container.animation.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.animation {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.6s ease;
+}
+
+.item-events {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+.animation.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fall {
+  opacity: 0;
+  transform: translateY(-200px);
+  visibility: hidden;
+}
+
+.fall.show {
+  visibility: visible;
+  animation: fallDown 1s ease-out forwards;
+}
+
+.item-events.show {
+  animation: fadeUp 0.8s ease forwards;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fallDown {
+  0% {
+    transform: translateY(-200px);
+    opacity: 0;
+  }
+  70% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  85% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/*Lazy-Loading*/
+
+.lazy {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.lazy.loaded {
+  opacity: 1;
+}
+
+/*Button*/
+
+.button {
+  font-size: 18px;
+  padding: 12px 56px;
+  color: #fff;
+  background: linear-gradient(to right, #fe9c1c, #ff5d29);
+  border-radius: 40px;
+  transition: all 0.4s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: linear-gradient(to right, #ff5d29, #fe9c1c);
+  transform: scale(0.95) translateY(4px);
+  box-shadow: 0 2px 4px rgba(17, 17, 17, 0.2);
+}

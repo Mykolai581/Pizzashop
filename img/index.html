@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./img/pizzashop.svg" />
+    <link rel="stylesheet" href="./style/resetStyle.css" />
+    <link rel="stylesheet" href="./style/style.css" />
+    <link rel="stylesheet" href="./style/adaptiveStyle.css" />
+    <title>Pizzashop</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__container">
+          <div class="header__logo">
+            <a href="#" class="logo__link">
+              <img
+                class="logo"
+                src="./img/pizzashop.svg"
+                alt="Pizzashop-Logo"
+              />
+            </a>
+          </div>
+          <div class="header__menu menu">
+            <nav class="menu__body">
+              <ul class="menu__list">
+                <li class="menu__item">
+                  <a href="#Home" class="menu__link">Home</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#Menu" class="menu__link">Menu</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#Events" class="menu__link">Events</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#AboutUs" class="menu__link">About us</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="header__buttons">
+            <button id="button-login" class="header__button button">
+              Log in
+            </button>
+
+            <div id="header-modal" class="header__form-modal modal">
+              <div class="modal__overlay"></div>
+              <div class="form-modal__content modal__content">
+                <span class="modal-close">&times;</span>
+                <form class="header__form form" autocomplete="off">
+                  <input
+                    placeholder="Enter your name"
+                    type="text"
+                    class="form__name"
+                  />
+                  <input
+                    placeholder="Enter your email "
+                    type="email"
+                    class="form__email"
+                  />
+                  <input
+                    placeholder="Enter your password"
+                    type="text"
+                    class="form__password"
+                  />
+
+                  <button type="submit" class="form__button button">
+                    send
+                  </button>
+                </form>
+                <div id="formMessages"></div>
+              </div>
+            </div>
+
+            <div class="header__actions">
+              <button id="button-shop" class="header__shop">
+                <img src="./img/shop.svg" alt="Shop" />
+                <span id="cart-count" class="cart-count"></span>
+              </button>
+              <button class="menu-burger">
+                <span></span>
+                <span></span>
+                <span></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="main">
+        <section class="main__home home" id="Home">
+          <div class="home__container">
+            <div class="home__pizza pizza1">Pizza</div>
+            <div class="home__content content animation">
+              <h2 class="home__title title animation">
+                The Fastest
+                <img
+                  class="icon-arrow"
+                  src="./img/HomeSection/Arrow.svg"
+                  alt="Arrow"
+                />
+                Pizza
+                <img
+                  class="icon-lightning"
+                  src="./img/HomeSection/Lightning.svg"
+                  alt="Lightning"
+                />
+                Delivery
+              </h2>
+              <div class="home__text text animation">
+                <p>
+                  We will deliver juicy pizza for your family in 30 minutes, if
+                  the courier is late - <span>pizza is free!</span>
+                </p>
+              </div>
+              <div class="content__item-content animation">
+                <div class="content__item item-content">
+                  <div class="item-content__text text">
+                    <p>Cooking process:</p>
+                  </div>
+                  <div class="item-content__video">
+                    <a
+                      href="https://www.youtube.com/shorts/qkRrmKWotA8"
+                      class="item-content__video-link"
+                    >
+                      <div class="item-content__play">
+                        <img src="./img/HomeSection/Play.svg" alt="Play" />
+                      </div>
+                      <div class="item-content__image">
+                        <img
+                          data-src="./img/HomeSection/HowMakePizza.png"
+                          alt="How Make Pizza"
+                          class="lazy"
+                        />
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="home__buttons-content">
+                <div class="home__buttons animation">
+                  <button class="home__button1 button">To order</button>
+                  <button class="home__button2 button">Pizza-Menu</button>
+                </div>
+              </div>
+              <img
+                src="./img/HomeSection/Arrow2.svg"
+                alt="Arrow"
+                class="content__icon-arrow"
+              />
+            </div>
+            <div class="home__images">
+              <img
+                src="./img/HomeSection/Pizza.svg"
+                alt="Pizza"
+                class="image-pizza fall"
+              />
+              <div class="home__image animation">
+                <img
+                  data-src="./img/HomeSection/Image.png"
+                  alt="Pizza"
+                  class="lazy"
+                />
+              </div>
+
+              <img
+                src="./img/HomeSection/PotatoFree.svg"
+                alt="Potato Free"
+                class="image-potatoFree fall"
+              />
+            </div>
+            <div class="home__pizza pizza2">Pizza</div>
+          </div>
+        </section>
+        <section class="main__menu menu" id="Menu">
+          <div class="menu__container">
+            <div class="menu__menu menu1">Menu</div>
+            <h2 class="menu__title title animation">Menu</h2>
+            <div class="menu__tabs tabs">
+              <button data-tab="tab1" class="tabs__button active">
+                Show All
+              </button>
+              <button data-tab="tab2" class="tabs__button">Meat</button>
+              <button data-tab="tab3" class="tabs__button">Vegetarian</button>
+              <button data-tab="tab4" class="tabs__button">Sea products</button>
+              <button data-tab="tab5" class="tabs__button">Mushroom</button>
+            </div>
+            <div class="menu__tab-content">
+              <div
+                data-content="tab1"
+                class="tab-content active"
+                id="tab-content1"
+              >
+                <div class="menu__items1 animation"></div>
+                <div class="menu__image-bg image-bg animation">
+                  <h2 class="image-bg__title animation">MOST POPULAR PIZZA</h2>
+                </div>
+                <div class="menu__menu menu2">Menu</div>
+                <div class="menu__items2 animation"></div>
+              </div>
+              <div data-content="tab2" class="tab-content">
+                <div class="menu__items1 items-content"></div>
+                <div class="menu__image-bg image-bg animation">
+                  <h2 class="image-bg__title animation">MOST POPULAR PIZZA</h2>
+                </div>
+                <div class="menu__items2 items-content"></div>
+              </div>
+              <div data-content="tab3" class="tab-content">
+                <div class="menu__items1 items-content"></div>
+                <div class="menu__image-bg image-bg animation">
+                  <h2 class="image-bg__title animation">MOST POPULAR PIZZA</h2>
+                </div>
+                <div class="menu__items2 items-content"></div>
+              </div>
+              <div data-content="tab4" class="tab-content">
+                <div class="menu__items1 items-content"></div>
+                <div class="menu__image-bg image-bg animation">
+                  <h2 class="image-bg__title animation">MOST POPULAR PIZZA</h2>
+                </div>
+                <div class="menu__items2 items-content"></div>
+              </div>
+              <div data-content="tab5" class="tab-content">
+                <div class="menu__items1 items-content"></div>
+                <div class="menu__image-bg image-bg animation">
+                  <h2 class="image-bg__title animation">MOST POPULAR PIZZA</h2>
+                </div>
+                <div class="menu__items2 items-content"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="main__events events" id="Events">
+          <div class="events__container">
+            <div class="events__events events1">Events</div>
+            <div class="events__items items-events1">
+              <img
+                src="./img/EventsSection/EggAndBacon.svg"
+                alt="EggAndBacon"
+                class="image-EggAndBacon fall"
+              />
+              <div class="events__item item-events">
+                <div class="item-events__image">
+                  <img src="./img/EventsSection/Image01.jpg" alt="Pizza" />
+                </div>
+                <div class="item-events__content">
+                  <h3 class="item-events__title">HOW WE COOKING</h3>
+                  <button class="item-events__button button modal-btn">
+                    More
+                  </button>
+                </div>
+              </div>
+              <div class="events__item item-events">
+                <div class="item-events__image">
+                  <img src="./img/EventsSection/Image02.jpg" alt="Pizza" />
+                </div>
+                <div class="item-events__content">
+                  <h3 class="item-events__title">OUR BLOG</h3>
+                  <button class="item-events__button button modal-btn">
+                    More
+                  </button>
+                </div>
+              </div>
+              <div class="events__item item-events events__content">
+                <h2 class="events__title title">Events</h2>
+                <div class="events__text text">
+                  <p>
+                    There are regular events in our pizzeria that will allow you
+                    to eat delicious food for a lower price!
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="events__items items-events2">
+              <div class="events__item item-events">
+                <div class="item-events__image image-events">
+                  <img src="./img/EventsSection/Image03.jpg" alt="Eating" />
+                </div>
+                <div class="item-events__content">
+                  <h3 class="item-events__title">TWO PIZZA FOR 1 PRICE</h3>
+                  <button class="item-events__button button modal-btn">
+                    More
+                  </button>
+                </div>
+              </div>
+              <div class="events__item item-events">
+                <div class="item-events__image image-events">
+                  <img src="./img/EventsSection/Image04.png" alt="Food" />
+                </div>
+                <div class="item-events__content">
+                  <h3 class="item-events__title">KITCHEN TOUR</h3>
+                  <button class="item-events__button button modal-btn">
+                    More
+                  </button>
+                </div>
+              </div>
+              <img
+                src="./img/EventsSection/Buritto.svg"
+                alt="Buritto"
+                class="image-Buritto fall"
+              />
+            </div>
+            <div class="events__items items-events3">
+              <img
+                src="./img/EventsSection/Coffee.svg"
+                alt="Coffee"
+                class="image-Coffee fall"
+              />
+              <div class="events__item item-events">
+                <div class="item-events__image">
+                  <img src="./img/EventsSection/Image05.jpg" alt="Pizza" />
+                </div>
+                <div class="item-events__content">
+                  <h3 class="item-events__title">FREE COFFEE FOR 3 PIZZA</h3>
+                  <button class="item-events__button button modal-btn">
+                    More
+                  </button>
+                </div>
+              </div>
+              <div class="events__item item-events">
+                <div class="item-events__image">
+                  <img src="./img/EventsSection/Image06.jpg" alt="Image" />
+                </div>
+                <div class="item-events__content">
+                  <h3 class="item-events__title">OUR INSTAGRAM</h3>
+                  <button class="item-events__button button modal-btn">
+                    More
+                  </button>
+                </div>
+              </div>
+              <div class="events__item item-events">
+                <div class="item-events__image">
+                  <img src="./img/EventsSection/Image07.jpg" alt="Pizza" />
+                </div>
+                <div class="item-events__content">
+                  <h3 class="item-events__title item-events__title7">
+                    WHERE ARE YOU CHOOSE US?
+                  </h3>
+                  <button class="item-events__button button modal-btn">
+                    More
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="events__events events2">Events</div>
+          </div>
+        </section>
+        <section class="main__aboutUs aboutUs" id="AboutUs">
+          <div class="aboutUs__container">
+            <div class="aboutUs_aboutUs aboutUs1">About</div>
+            <div class="aboutUs__content aboutUs-content">
+              <h2 class="aboutUs-content__title title animation">About us</h2>
+              <div class="aboutUs-content__text text animation">
+                <p>
+                  In just a couple of years, we have opened 6 outlets in
+                  different cities: Kyiv, Odessa, Lviv, Vinnytsia, Kharkiv,
+                  Dnipro , and in the future we plan to develop the network in
+                  other major cities of Ukraine.
+                </p>
+              </div>
+
+              <div class="aboutUs-content__image animation">
+                <img src="./img/AboutUsSection/Pizzas.png" alt="Pizzas" />
+              </div>
+              <div class="aboutUs-content__text text animation">
+                <p>
+                  The kitchen of each point is at least: 400-500 sq. m. meters,
+                  hundreds of employees, smoothly performing work in order to
+                  receive / prepare / form / deliver customer orders on time.
+                </p>
+              </div>
+            </div>
+            <img
+              src="./img/AboutUsSection/Arrow.svg"
+              alt="Arrow"
+              class="aboutUs__arrow"
+            />
+            <div class="aboutUs__images">
+              <img
+                src="./img/HomeSection/Pizza.svg"
+                alt="Pizza"
+                class="aboutUs-pizza fall"
+              />
+              <div class="aboutUs__image animation">
+                <img src="./img/AboutUsSection/Pizza.png" alt="Pizza" />
+              </div>
+              <img
+                src="./img/HomeSection/PotatoFree.svg"
+                alt="PotatoFree"
+                class="aboutUs-potatoFree fall"
+              />
+            </div>
+            <div class="aboutUs_aboutUs aboutUs2">About</div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="footer__container">
+          <div class="footer__items footer__items1">
+            <div class="footer__logo">
+              <a href="#" class="logo__link"
+                ><img src="./img/Logo.svg" alt="Logo"
+              /></a>
+            </div>
+
+            <div class="footer-content__items">
+              <div class="footer__item item-footer">
+                <div class="item-footer__title">Home</div>
+                <div class="item-footer__links">
+                  <a href="#" class="item-footer__link">To Order</a>
+                  <a href="#" class="item-footer__link">About us</a>
+                  <a href="#" class="item-footer__link">Events</a>
+                  <a href="#" class="item-footer__link">Menu</a>
+                </div>
+              </div>
+              <div class="footer__item item-footer">
+                <div class="item-footer__title">Events</div>
+                <div class="item-footer__links">
+                  <a href="#" class="item-footer__link"
+                    >3 Pizza 1 Free Coffee</a
+                  >
+                  <a href="#" class="item-footer__link">2 Pizza for 1 Price</a>
+                  <a href="#" class="item-footer__link">Kitchen Tour</a>
+                </div>
+              </div>
+              <div class="footer__item item-footer">
+                <div class="item-footer__title">Menu</div>
+                <div class="item-footer__links">
+                  <a href="#" class="item-footer__link">Show All</a>
+                  <a href="#" class="item-footer__link">Seaproducts</a>
+                  <a href="#" class="item-footer__link">Vegan</a>
+                  <a href="#" class="item-footer__link">Meat</a>
+                </div>
+              </div>
+              <div class="footer__item item-footer">
+                <div class="item-footer__title">About Us</div>
+                <div class="item-footer__links">
+                  <a href="#" class="item-footer__link">Our History</a>
+                  <a href="#" class="item-footer__link">Why We?</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer__items">
+            <div class="footer__number">
+              <a href="#" class="number__link">+7 (937) 333-55-33</a>
+            </div>
+            <div class="footer__links">
+              <a href="#" class="footer__link"
+                ><img src="./img/Footer/Instagram.svg" alt="Instagram"
+              /></a>
+              <a href="#" class="footer__link">
+                <img src="./img/Footer/Twitter.svg" alt="Twitter" />
+              </a>
+              <a href="#" class="footer__link">
+                <img src="./img/Footer/FaceBook.svg" alt="FaceBook" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script type="module" src="./script/script.js"></script>
+  </body>
+</html>
